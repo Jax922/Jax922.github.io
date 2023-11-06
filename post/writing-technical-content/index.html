@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: July 21, 2023 --><html lang="en-us" >
+<!-- Last Published: November 6, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -242,6 +242,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FS3JV3L56X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-FS3JV3L56X', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -284,8 +323,8 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://example.com/post/writing-technical-content/" />
-<link rel="canonical" href="https://example.com/post/writing-technical-content/" />
+<link rel="alternate" hreflang="en-us" href="https://jax922.github.io/post/writing-technical-content/" />
+<link rel="canonical" href="https://jax922.github.io/post/writing-technical-content/" />
 
 
 
@@ -315,15 +354,12 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
 
 <meta property="twitter:card" content="summary_large_image" />
-
-  <meta property="twitter:site" content="@wowchemy" />
-  <meta property="twitter:creator" content="@wowchemy" />
-<meta property="twitter:image" content="https://example.com/post/writing-technical-content/featured.jpg" />
+<meta property="twitter:image" content="https://jax922.github.io/post/writing-technical-content/featured.jpg" />
 <meta property="og:site_name" content="Dong She" />
-<meta property="og:url" content="https://example.com/post/writing-technical-content/" />
+<meta property="og:url" content="https://jax922.github.io/post/writing-technical-content/" />
 <meta property="og:title" content="Writing technical content in Markdown | Dong She" />
 <meta property="og:description" content="Wowchemy is designed to give technical content creators a seamless experience. You can focus on the content and Wowchemy handles the rest.
-Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation." /><meta property="og:image" content="https://example.com/post/writing-technical-content/featured.jpg" /><meta property="og:locale" content="en-us" />
+Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation." /><meta property="og:image" content="https://jax922.github.io/post/writing-technical-content/featured.jpg" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -358,12 +394,12 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/post/writing-technical-content/"
+    "@id": "https://jax922.github.io/post/writing-technical-content/"
   },
   "headline": "Writing technical content in Markdown",
   
   "image": [
-    "https://example.com/post/writing-technical-content/featured.jpg"
+    "https://jax922.github.io/post/writing-technical-content/featured.jpg"
   ],
   
   "datePublished": "2019-07-12T00:00:00Z",
@@ -379,7 +415,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
     "name": "Dong She",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+      "url": "https://jax922.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "Wowchemy is designed to give technical content creators a seamless experience. You can focus on the content and Wowchemy handles the rest.\nHighlight your code snippets, take notes on math classes, and draw diagrams from textual representation."
@@ -935,7 +971,7 @@ data.head()
 
 
 
-<div id="chart-896514237" class="chart"></div>
+<div id="chart-824376195" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -945,7 +981,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json("./line-chart.json", function(chart) {
-        Plotly.plot('chart-896514237', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-824376195', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -1248,7 +1284,7 @@ Crash --> [*]
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F&amp;text=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F&amp;text=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1265,7 +1301,7 @@ Crash --> [*]
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F&amp;t=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F&amp;t=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1284,7 +1320,7 @@ Crash --> [*]
         
       
       <li>
-        <a href="mailto:?subject=Writing%20technical%20content%20in%20Markdown&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Writing%20technical%20content%20in%20Markdown&amp;body=https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1301,7 +1337,7 @@ Crash --> [*]
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F&amp;title=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F&amp;title=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1318,7 +1354,7 @@ Crash --> [*]
       
       
       <li>
-        <a href="whatsapp://send?text=Writing&#43;technical&#43;content&#43;in&#43;Markdown%20https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Writing&#43;technical&#43;content&#43;in&#43;Markdown%20https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1335,7 +1371,7 @@ Crash --> [*]
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fwriting-technical-content%2F&amp;title=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fjax922.github.io%2Fpost%2Fwriting-technical-content%2F&amp;title=Writing&#43;technical&#43;content&#43;in&#43;Markdown" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1368,13 +1404,13 @@ Crash --> [*]
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu52817cbd3e4b1a89f1837743161b8123_77325_270x270_fill_q75_lanczos_center.jpg" alt="Dong She"></a>
+      <a href="https://jax922.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu52817cbd3e4b1a89f1837743161b8123_77325_270x270_fill_q75_lanczos_center.jpg" alt="Dong She"></a>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://example.com/">Dong She</a></h5>
+      <h5 class="card-title"><a href="https://jax922.github.io/">Dong She</a></h5>
       
-      <p class="card-text">My research interests include Computer Graphics, Simuation and Animation, Parallel computing.</p>
+      <p class="card-text">My research interests include Computer Graphics, Vislization, Parallel computing.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -1548,7 +1584,7 @@ Crash --> [*]
   
 
 
-<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -1656,7 +1692,7 @@ Crash --> [*]
   
 
 
-<script src="/en/js/wowchemy.min.ead4a376bcf2c4714888c770ea9b0040.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
